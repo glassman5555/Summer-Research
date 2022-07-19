@@ -54,14 +54,14 @@ save_freq = 10000
 
 # ---------- CONFIG ----------
 cf = {
-    'hit_base_reward': 1000,
-    'hit_plane_reward': 30,
-    'miss_punishment': -1,
+    'hit_base_reward': 10,
+    'hit_plane_reward': 1,
+    'miss_punishment': 0,
     'too_long_punishment': 0,
-    'lose_punishment': 0
+    'lose_punishment': -3
 }
 
-timesteps = 3000000
+timesteps = 30000000
 saved_timesteps = timesteps // save_freq * save_freq
 file = open(f"{FOLDER}/results.txt", 'a')
 print("Timesteps:", saved_timesteps, file=file)
